@@ -142,7 +142,7 @@ void SctpTransport::SetSettings(const SctpSettings &s) {
 
 	// Heartbeat interval
 	usrsctp_sysctl_set_sctp_heartbeat_interval_default(
-	    to_uint32(s.heartbeatInterval.value_or(10000ms).count()));
+	    to_uint32(s.heartbeatInterval.value_or(500ms).count()));
 }
 
 void SctpTransport::Cleanup() {
