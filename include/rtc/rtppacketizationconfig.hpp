@@ -69,6 +69,15 @@ public:
 	uint16_t playoutDelayMin;
 	uint16_t playoutDelayMax;
 
+	// https://webrtc.googlesource.com/src/+/refs/heads/main/docs/native-code/rtp-hdrext/color-space/
+	uint8_t colorSpaceId;
+	uint8_t colorChromaSitingHorz = 0;		// unspecified
+	uint8_t colorChromaSitingVert = 0;		// unspecified
+	uint8_t colorRange = 2;					// full range
+	uint8_t colorPrimaries = 1;				// BT.709-6
+	uint8_t colorTransfer = 1;				// BT.709-6
+	uint8_t colorMatrix = 1;				// BT.709-6
+
 	/// Construct RTP configuration used in packetization process
 	/// @param ssrc SSRC of source
 	/// @param cname CNAME of source
